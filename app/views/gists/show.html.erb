@@ -1,20 +1,23 @@
+<%= render 'index' %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Snippet:</strong>
 </p>
 
-<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang)%>
+<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang )%>
 
 <p>
   <strong>Lang:</strong>
-  <%= @gist.lang %>
+ <h4> <%= @gist.lang %> </h4>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @gist.description %>
+ <h4> <%= @gist.description %> </h4>
 </p>
 
-<%= link_to 'Edit', edit_gist_path(@gist) %> |
-<%= link_to 'Back', gists_path %>
+<%= link_to 'Edit', edit_gist_path(@gist),class:'btn btn-primary' %> |
+<%= link_to 'Back', gists_path,class:'btn btn-default' %>
+

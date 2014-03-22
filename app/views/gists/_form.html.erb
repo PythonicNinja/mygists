@@ -19,6 +19,7 @@ a.flatten.select.with_index{|a,i| (i+1) % 2 == 1}.each { |e|
     </div>
   <% end %>
 
+<div class="container">
   <div class="field">
     <%= f.label :snippet %><br>
     <%= f.text_area :snippet %>
@@ -35,8 +36,11 @@ a.flatten.select.with_index{|a,i| (i+1) % 2 == 1}.each { |e|
   <div class="actions">
     <%= 
 
-    f.submit 
+    f.submit(class:'btn btn-success')
 
     %>
+  </div>
+  <%= link_to 'Back', gists_path,class:'btn btn-default' %>
+  <%= link_to 'Show', @gist ,class:'btn btn-default'%>
   </div>
 <% end %>
