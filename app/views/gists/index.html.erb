@@ -1,9 +1,7 @@
 
 <%= render 'index' %>
 
-
- <%= link_to 'New Gist', new_gist_path, class:'btn btn-primary btn-lg' %>
-
+<div style="width:300px;margin: 0 auto;"><h3><%= will_paginate @gists  %></h3> </div>
 <div class="table-responsive">
 <table class="table table-striped">
   <thead>
@@ -28,6 +26,8 @@
     <% end %>
   
 </table>
+
+
 </div>
 <br>
 
